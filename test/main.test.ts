@@ -1,5 +1,4 @@
 import '@aws-cdk/assert/jest';
-import { LambdaEdgeEventType } from '@aws-cdk/aws-cloudfront';
 import { App } from '@aws-cdk/core';
 import { CloudfrontStack, LambdaEdgeStack } from '../src/main';
 
