@@ -1706,10 +1706,10 @@ cdk-remote-stack@^0.1.99:
     "@aws-cdk/core" "^1.62.0"
     "@aws-cdk/custom-resources" "^1.62.0"
 
-cdk-s3bucket-ng@*:
-  version "1.0.20"
-  resolved "https://registry.yarnpkg.com/cdk-s3bucket-ng/-/cdk-s3bucket-ng-1.0.20.tgz#aadc35b0ae31bb425f04be4c4497aecbd4cff4e8"
-  integrity sha512-gZovtg7qb/IQsvKLdsY5/w4vXE7FjZFpxz+y8Tv/t/sL84Jj5L+H51O8S8EeOh9GuZdB++AEjGOvGL6zlE6p8Q==
+cdk-s3bucket-ng@^1.0.20:
+  version "1.0.22"
+  resolved "https://registry.yarnpkg.com/cdk-s3bucket-ng/-/cdk-s3bucket-ng-1.0.22.tgz#a76546f0f8c9a19c6ed7caabf17e0d84af1d3dcd"
+  integrity sha512-3G0tTtndczRQQp09WaW44OfQ5RM9IDsJagE/QyUEspidBae1duze+nZGhBVxg4fkq4Hw21uJJyePRvnMhqMjQQ==
   dependencies:
     "@aws-cdk/aws-iam" "^1.72.0"
     "@aws-cdk/aws-lambda" "^1.72.0"
