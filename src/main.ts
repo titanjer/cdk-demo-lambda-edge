@@ -42,6 +42,7 @@ export class CloudfrontStack extends Stack {
   constructor(scope: Construct, id: string, props: CloudfrontStackProps) {
     super(scope, id, props);
 
+    // create an S3 bucket to be cloufront origin
     const bucket = new BucketNg(this, 'Files', {
       websiteIndexDocument: 'index.html',
       publicReadAccess: true,
@@ -60,11 +61,13 @@ export class CloudfrontStack extends Stack {
       },
     });
 
+    // get lambda@edge function ARN by cdk-remote-stack
     const outputs = new StackOutputs(this, 'LambdaFuncArn', {
       stack: props.lambdaStack,
     });
     const lambdaEdgeFuncArn = outputs.getAttString('LambdaFuncArn');
 
+    // create a cloudfront distribution
     const cf = new cloudfront.Distribution(this, 'Cloudfront', {
       defaultBehavior: {
         origin,
@@ -79,6 +82,7 @@ export class CloudfrontStack extends Stack {
       comment: 'cloudfront-test',
     });
 
+    // output values
     new CfnOutput(this, 'LambdaEdgeFuncArn', { value: lambdaEdgeFuncArn });
     new CfnOutput(this, 'CloudfrontDomainName', { value: `https://${cf.domainName}/data` });
     new CfnOutput(this, 'S3BucketName', { value: bucket.bucketName });
