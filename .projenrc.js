@@ -9,10 +9,8 @@ const project = new AwsCdkTypeScriptApp({
     '@aws-cdk/aws-iam',
     '@aws-cdk/aws-lambda',
     '@aws-cdk/aws-lambda-python',
-    '@aws-cdk/aws-logs',
     '@aws-cdk/aws-s3',
     '@aws-cdk/aws-s3-deployment',
-    '@aws-cdk/custom-resources',
   ],
   deps: [
     'cdk-remote-stack',
