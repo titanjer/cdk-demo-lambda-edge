@@ -1,8 +1,8 @@
 const { AwsCdkTypeScriptApp } = require('projen');
 
 const project = new AwsCdkTypeScriptApp({
-  cdkVersion: "1.74.0",
-  name: "cdk-lambda-edge",
+  cdkVersion: '1.74.0',
+  name: 'cdk-lambda-edge',
   cdkDependencies: [
     '@aws-cdk/aws-cloudfront',
     '@aws-cdk/aws-cloudfront-origins',
