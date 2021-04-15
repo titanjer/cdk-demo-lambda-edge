@@ -1030,7 +1030,7 @@ Object {
             "Arn",
           ],
         },
-        "randomString": "0wetmj9svk",
+        "randomString": "0i",
         "regionName": Object {
           "Ref": "AWS::Region",
         },
